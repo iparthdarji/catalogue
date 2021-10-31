@@ -1,6 +1,7 @@
-// ignore_for_file: prefer_const_constructors
+// ignore_for_file: prefer_const_constructors, avoid_unnecessary_containers
 
 import 'package:flutter/material.dart';
+import 'package:flutter_app/widgets/drawer.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -11,15 +12,17 @@ class HomePage extends StatelessWidget {
     var developerName = "Parth Darji";
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.black,
-        title: Text("My New Flutter App"),
+        title: Text(
+          "Catalogue",
+          style: TextStyle(color: Colors.black),
+        ),
       ),
       body: Center(
         child: Container(
           child: Text("Welcome to $technologyName by $developerName"),
         ),
       ),
-      drawer: Drawer(),
+      drawer: MyDrawer(),
     );
   }
 }
